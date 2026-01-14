@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <table border="1" width="80%">
+        <form action="success.html" method="POST">
+            <tr>
+                <td><label for="cname">Name </label></td>
+                <td><input size="50" name="txt_cname" id="cname" required minlength="5" maxlength="20"></td>
+            </tr>
+
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" name="num_age" id="age" min="20" max="60"></td>
+            </tr>
+
+            <tr>
+                <td><label for="ccity">City </label></td>
+                <td><input size="50" name="txt_ccity" id="ccity"></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                <input type="radio" name="rad_cgender" value="M" checked>MALE
+                <input type="radio" name="rad_cgender" value="F">FEMALE
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="passport">Have Passport ?</label></td>
+                <td><input type="checkbox" name="chk_passport" id="passport" value="YES" checked>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email ID</label></td>
+                <td><input type="email" name="txt_cemail" id="email"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="bdate">Date of Birth</label>
+                </td>
+                <td>
+                    <input type="date" name="txt_cbdate" id="bdate">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="intin">Interested in</label></td>
+                <td>
+                    <select name="sel_int" id="intin">
+                        <option value="C">Cricket</option>
+                        <option value="N">News</option>
+                        <option value="P">Politics</option>
+                    </select>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="addr">Address</label></td>
+                <td>
+                    <textarea name="txt_addr" id="addr" rows="5" cols="80"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="photo">Photo</label></td>
+                <td><input type="file" name="file_photo" id="photo"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="submit">SAVE</button>
+                </td>
+            </tr>
+
+        </form>
+    </table>
+</body>
+</html>

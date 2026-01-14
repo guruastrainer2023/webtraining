@@ -1,0 +1,28 @@
+table{
+    border: solid 2mm black;
+    width: 60%;
+    border-collapse: collapse;
+}
+td{
+    border: solid 1mm black;
+}
+th{
+    background-color: gray;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+.numeric{
+    text-align: right;
+}
+
+.blackify{
+    background-color: black;
+    color: white;
+}
+
+#summary{
+    background-color: lightgreen;
+    color: black;
+    font-size: larger;
+}

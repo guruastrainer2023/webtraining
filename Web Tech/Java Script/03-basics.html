@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function welcome() {
+            alert("Welcome to JS")
+        }
+        function add(a,b){
+            var c=a+b;
+            return c;
+        }
+        var subtract=function(a,b){
+            var c=a-b;
+            return c;
+        }
+
+        var difference=subtract;
+
+        // arrow function
+        var multiply=(a,b)=>{  
+            var c=a*b
+            return c
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        welcome();
+        var r=add(3,5)
+        alert(r)
+        r=add("HTML ", " CSS ")
+        alert(r)
+        r=add("HTML", 10)
+        alert(r)
+        r=add(3,4,5)
+        alert(r)
+        r=add();
+        alert(r)
+        r=add(3)
+        alert(r)
+
+        r=subtract(100,50);
+        alert(r)
+
+        r=difference(10,2);
+        alert(r)
+
+        r=multiply(10,10);
+        alert(r)
+    </script>
+</body>
+
+</html>
