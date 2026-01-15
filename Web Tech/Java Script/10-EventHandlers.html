@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var originalWidth, originalHeight;
+
+        function f1(p){  //event handling function
+            alert(p.innerText)
+        }
+
+        function f2(p){  //event handling function
+            alert(p.innerText.toUpperCase())
+        }
+
+        function f3(){
+            alert("The page is loaded completely")
+        }
+
+        function f4(a){
+            alert(a.width+","+a.height+","+a.src)
+        }
+
+        function f5(imgelement){
+            originalWidth=imgelement.width;
+            originalHeight=imgelement.height;
+            imgelement.width="500";
+            imgelement.height="400";
+            imgelement.src="imgs/surya.jpg"
+        }
+
+        function f6(imgelement){
+            imgelement.width=originalWidth;
+            imgelement.height=originalHeight;
+            imgelement.src="imgs/dhoni.jpg"
+        }
+    </script>
+</head>
+<body onload="f3()">
+    <h1 onclick="alert('This page details about indian cricket')">Indian Cricket</h1>
+
+    <p onclick="f1(this)">
+        The India men's national cricket team
+        represents India in international cricket.
+        It is governed by the Board of Control for Cricket in India (BCCI)
+        and is a full member nation of the International Cricket Council with
+        Test, One Day International and Twenty20 International status.
+        India are the current holders of the T20 World Cup,
+        the ICC Champions Trophy and the Asia Cup.
+    </p>
+
+    <p onclick="f2(this)">
+        The team has played 598 Test matches,
+        winning 185, losing 188, with 224 draws and 1 tie.
+        As of August 2025, India is ranked fourth in the ICC Men's
+        Test Team Rankings with 107 rating points. India have played
+        in two of the three World Test Championship finals, finishing
+        runners-up in 2021 and 2023.
+    </p>
+
+    <img src="imgs/dhoni.jpg" width="300" height="250" onclick="f4(this)" 
+            onmouseover="f5(this)" 
+            onmouseout="f6(this)">
+
+</body>
+</html>

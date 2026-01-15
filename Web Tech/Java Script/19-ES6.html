@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(id,name,salary){
+                this._id=id;
+                this._name=name;
+                this._salary=salary;
+            }
+
+            set name(n){
+              
+                this._name=n;
+            }
+
+            get name(){
+                alert('Name accessed')
+                return this._name;
+            }
+
+            getAllowance(){
+                return this._salary*0.5;
+            }
+
+            getTax(){
+                return this._salary*0.1;
+            }
+
+            getNetSalary(){
+                return this._salary+this.getAllowance()-this.getTax();
+            }
+        }
+
+        var emp1=new Employee(101, "Shalini", 3000.00);
+        emp1.name="Vanitha";
+        console.log(emp1);
+        console.log(emp1.name)
+        console.log(emp1.getAllowance())
+        console.log(emp1.getTax())
+        console.log(emp1.getNetSalary())
+    </script>
+</body>
+</html>

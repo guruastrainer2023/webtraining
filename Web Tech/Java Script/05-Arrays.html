@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var personNames=["Ram", "Anitha", "Kiran", "Reshmi"]
+        console.log(personNames.length)
+        console.log(personNames.at(0))
+        personNames.push("Asha","John", "Dinesh")
+        console.log(personNames);
+        for(var i=0; i<personNames.length; i++){
+            console.log(personNames[i])
+        }
+        var last=personNames.pop();
+        console.log("Popped Element "+ last)
+        console.log(personNames)
+
+        personNames.shift();
+        console.log(personNames)
+
+        personNames.unshift("Lee", "Joe");
+        console.log(personNames)
+
+        personNames.splice(3,2,"Abc","def","xyz")
+        console.log(personNames)
+
+        personNames.splice(3,0,"Vikram", "Tulasi");
+        console.log(personNames)
+    </script>
+</body>
+</html>

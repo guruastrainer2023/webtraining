@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printDetails(){
+            console.log(this.rollNumber+","+this.name+","+this.salary+","+this.getNetSalary())
+        }
+
+
+        function Employee(a,b,c){
+            this.rollNumber=a;
+            this.name=b;
+            this.salary=c;
+            this.getAllowance=function(){
+                return this.salary*0.5;
+            }
+            this.getDedution=function(){
+                return this.salary*0.1;
+            }
+            this.getNetSalary=function(){
+                return this.salary+this.getAllowance()-this.getDedution();
+            }
+            this.printData=printDetails;
+        }
+
+        var emp1=new Employee(101,"Ram",30000.00)
+        console.log(emp1)
+
+        console.log(emp1.rollNumber)
+        console.log(emp1.name)
+        console.log(emp1.salary)
+        console.log(emp1.getAllowance())
+        emp1.printData();
+
+        //one more employee object
+        var emp2;
+        //create object
+        //print data in the object
+        //invoke functions in the object
+    </script>
+</body>
+</html>

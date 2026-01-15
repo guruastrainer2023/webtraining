@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(){
+            var inp1=window.document.getElementById("num1_txt").value;
+            var inp2=window.document.getElementById("num2_txt").value;
+            var n1=parseInt(inp1);
+            var n2=parseInt(inp2)
+            var result=n1+n2;
+            document.getElementById("result1").innerText=result;
+        }
+
+        function difference(){
+            var inp1=window.document.getElementById("num1_txt").value;
+            var inp2=window.document.getElementById("num2_txt").value;
+            var n1=parseInt(inp1);
+            var n2=parseInt(inp2)
+            var result=n1-n2;
+            document.getElementById("result2").innerText=result;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Number 1</label>
+        <input id="num1_txt"><br><br>
+
+        <label>Number 2</label>
+        <input id="num2_txt"><br><br>
+
+        <button type="button" onclick="sum()">ADD</button>
+        <button type="button" onclick="difference()">SUBTRACT</button>
+        <button type="button">MULTIPLY</button>
+        <button type="button">DIVIDE</button>
+    </form>
+
+    <div>
+        SUM <span id="result1"></span><br>
+        SUBTRACTION <span id="result2"></span><br>
+        MULTIPLICATION <span id="result3"></span><br>
+        DIVISION <span id="result4"></span><br>
+
+    </div>
+    
+
+    
+</body>
+</html>

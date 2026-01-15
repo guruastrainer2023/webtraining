@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         Promise.all([
+            Promise.resolve("Task 1 completed"),
+            Promise.resolve("Task 2 completed"),
+            Promise.resolve("Task 3 completed")
+        ])
+            .then((results) => console.log(results))
+            .catch((error) => console.error(error));
+    </script>
+</body>
+</html>

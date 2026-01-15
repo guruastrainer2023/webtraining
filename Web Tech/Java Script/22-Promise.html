@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*setTimeout(()=>{
+            console.log("This is a message")
+        }, 3000);
+
+        console.log("done")
+        */
+
+        let promiseObj = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(" Infosys ");
+            }, 3000);
+        });
+
+        
+
+        promiseObj.then(  (result) =>{
+            console.log(result + " done ");
+        }).catch(
+            (err)=>{
+                console.log(err)
+            }
+        );
+        
+    </script>
+</body>
+
+</html>

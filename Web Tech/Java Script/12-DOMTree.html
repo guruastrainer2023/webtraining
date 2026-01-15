@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(){
+            var inp1=window.document.forms[0].elements[0].value;
+            var inp2=window.document.forms[0].elements[1].value;
+            var n1=parseInt(inp1);
+            var n2=parseInt(inp2)
+            var result=n1+n2;
+            document.forms[1].elements[0].value=result;
+        }
+
+        function difference(){
+            var inp1=window.document.forms[0].elements[0].value;
+            var inp2=window.document.forms[0].elements[1].value;
+            var n1=parseInt(inp1);
+            var n2=parseInt(inp2)
+            var result=n1-n2;
+            document.forms[1].elements[1].value=result;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Number 1</label>
+        <input><br><br>
+
+        <label>Number 2</label>
+        <input><br><br>
+
+        <button type="button" onclick="sum()">ADD</button>
+        <button type="button" onclick="difference()">SUBTRACT</button>
+        <button type="button">MULTIPLY</button>
+        <button type="button">DIVIDE</button>
+    </form>
+
+    <form>
+        <label>SUM</label>
+        <input><br><br>
+
+         <label>SUBTRACTION</label>
+        <input><br><br>
+
+         <label>MULTIPLICATION</label>
+        <input><br><br>
+
+         <label>DIVISION</label>
+        <input><br><br>
+
+    </form>
+
+    
+</body>
+</html>

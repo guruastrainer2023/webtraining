@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: gray;
+            color:black;
+        }
+
+        img{
+            width: 50%;
+            height: 600px;
+        }
+    </style>
+    <script>
+        function f1(element){
+            element.style.backgroundColor="lightgreen";
+            element.style.color="black";
+            element.style.margin="2cm";
+            element.style.padding="5mm";
+            element.style.border="solid";
+        }
+
+        function f2(){
+
+        }
+
+        var o_margin,o_padding
+        function f4(element){
+            o_margin=element.style.margin;
+            element.style.margin="2cm";
+            o_padding=element.style.padding;
+            element.style.padding="2cm";
+            element.style.border="solid";
+        }
+
+        function f5(element){
+            element.style.margin=o_margin;
+            element.style.padding=o_padding
+            element.style.border="none"
+        }
+
+        function f6(){
+            var element=document.getElementById("info")
+            element.innerText="This is not England Cricket";
+            element.style.border="solid";
+            element.style.padding="2cm";
+            element.style.margin="1in";
+        }
+       
+    </script>
+</head>
+<body>
+    <h1 onclick="f6()" id="info">Indian Cricket</h1>
+
+    <p onclick="f1(this)">
+        The India men's national cricket team
+        represents India in international cricket.
+        It is governed by the Board of Control for Cricket in India (BCCI)
+        and is a full member nation of the International Cricket Council with
+        Test, One Day International and Twenty20 International status.
+        India are the current holders of the T20 World Cup,
+        the ICC Champions Trophy and the Asia Cup.
+    </p>
+
+    <p onclick="f2(this)">
+        The team has played 598 Test matches,
+        winning 185, losing 188, with 224 draws and 1 tie.
+        As of August 2025, India is ranked fourth in the ICC Men's
+        Test Team Rankings with 107 rating points. India have played
+        in two of the three World Test Championship finals, finishing
+        runners-up in 2021 and 2023.
+    </p>
+
+    <img src="imgs/dhoni.jpg" 
+            onmouseover="f4(this)" 
+            onmouseout="f5(this)">
+
+</body>
+</html>
