@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            margin: 2cm;
+            padding: 2cm;
+            border: solid;
+        }
+    </style>
+    <script>
+        function f1(){
+            let element=document.getElementById("para1");
+            element.style.display="none";
+
+            let boldElement=document.getElementById("bold1");
+            boldElement.style.display="block";
+            
+        }
+
+         function f2(){
+            let element=document.getElementById("para1");
+            element.style.display="block";
+
+            let boldElement=document.getElementById("bold1");
+            boldElement.style.display="inline";
+
+            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p id="para1">
+            This is a paragraph.  This is a paragraph. This is a paragraph. This is a paragraph.
+            This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+            This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+        </p>
+
+        <p>
+            This is a paragraph.  This is a paragraph. This is a paragraph. This is a paragraph.
+            This is a paragraph. This is a paragraph. <b id="bold1">This is a paragraph</b>. This is a paragraph.
+            This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.
+        </p>
+
+
+        <button type="button" onclick="f1()">Hide This Element</button>
+        <button type="button" onclick="f2()">Show This Element</button>     
+    </div>
+</body>
+</html>
