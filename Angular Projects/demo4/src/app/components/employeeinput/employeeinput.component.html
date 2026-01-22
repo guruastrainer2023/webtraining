@@ -1,0 +1,79 @@
+<p>employeeinput works!</p>
+
+
+
+<form (ngSubmit)="add()">
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">ID</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="id" name="txt_id" required #txtid="ngModel">
+            <span style="color:red" *ngIf="txtid.touched && !txtid.valid">ID is mandatory</span>
+        </div>  
+    </div>
+
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">NAME</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="name" name="txt_name" minlength="5" maxlength="25" #txtname="ngModel">
+            <span style="color:red" *ngIf="txtname.touched && txtname.invalid">Name should contain minimum 5 characters and should not exceed 25 characters</span>
+        </div>
+    </div>
+
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">GENDER</label>
+        <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="rad_gender" value="MALE" [(ngModel)]="gender">
+                <label class="form-check-label">MALE</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="rad_gender" value="FEMALE" [(ngModel)]="gender">
+                <label class="form-check-label">FEMALE</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">DATE OF JOIN</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" [(ngModel)]="dateOfJoin" name="txt_doj">
+        </div>
+    </div>
+
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">BASIC SALARY</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" [(ngModel)]="basicSalary" name="num_basic" min="5000" max="60000" #txtbasic="ngModel">
+            <span style="color:red" *ngIf="txtbasic.touched && txtbasic.invalid">Invalid Basic Salary</span>
+        </div>
+    </div>
+
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">DEPARTMENT</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="department" name="drp_down_department">
+                <option>IT</option>
+                <option>ADMIN</option>
+                <option>FINANCE</option>
+                <option>LOGISTICS</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group row m-3">
+        <label class="col-sm-2 col-form-label">RELOCATION</label>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="relocation" name="chk_relocation">
+                <label class="form-check-label">Ready to Travel ?</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-10">
+        <input type="submit" value="ADD" class="btn btn-primary">
+    </div>
+
+   
+</form>
+

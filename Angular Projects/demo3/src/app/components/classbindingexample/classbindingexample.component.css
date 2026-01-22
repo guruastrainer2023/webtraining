@@ -1,0 +1,23 @@
+.text-success{
+    background-color: green;
+    padding: 5mm;
+    margin: 1cm;
+    border: solid;
+    color: white;
+}
+
+.text-danger{
+    background-color: red;
+    padding: 5mm;
+    margin: 1cm;
+    border: solid;
+    color: white;
+}
+
+.text-special{
+    font-style: italic;
+    padding: 5mm;
+    margin: 1cm;
+    border: solid;
+}
+

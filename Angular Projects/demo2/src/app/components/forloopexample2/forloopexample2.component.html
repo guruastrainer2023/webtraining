@@ -1,0 +1,19 @@
+<p>forloopexample2 works!</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>SlNo</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SALARY</th>
+    </tr>
+    <tr *ngFor="let p of personList; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.salary}}</td>
+    </tr>
+
+</table>
+
+

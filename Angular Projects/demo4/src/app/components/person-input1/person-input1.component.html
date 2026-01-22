@@ -1,0 +1,18 @@
+<p>person-input1 works!</p>
+
+
+<form [formGroup]="personForm">
+    <label>NAME</label>
+    <input type="text" name="txt_name" formControlName="pname">
+    <br>
+    <br>
+
+    <label>AGE</label>
+    <input type="number" name="txt_age" formControlName="page">
+    <br>
+    <br>
+
+    <input type="button" (click)="add(personForm.value)" value="SAVE">
+
+
+</form>

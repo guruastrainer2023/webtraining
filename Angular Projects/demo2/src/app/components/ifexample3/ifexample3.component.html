@@ -1,0 +1,5 @@
+<p>ifexample3 works!</p>
+
+<ng-template #ifBlock><h1>Senior Citizen</h1></ng-template>
+<ng-template #elseBlock><h1>Not a Senior Citizen</h1></ng-template>
+<div *ngIf="age>=60 then ifBlock else elseBlock"></div>
